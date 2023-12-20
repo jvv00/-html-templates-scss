@@ -1,22 +1,71 @@
 @import "variables", "mixins", "fonts", "reset";
 
-.card {
-  position: relative;
-  @include card($white, $primary);
-  span {
-    @include posXY;
-  }
+// btn style
+
+// card style
+
+// list style
+
+// layout
+.wrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+#header {
+  height: $hdH;
 }
 
-.slide {
-  li {
-    height: 300px;
-    a {
-      display: block;
-      height: 100%;
-      color: $primary;
+#main {
+  // min-height: calc(100vh - $hdH - $ftH);
+  flex-grow: 1;
+}
+#footer {
+  height: $ftH;
+}
+
+// header
+#header {
+  .inner {
+    // @include flexSpaceBetween;
+    @include flex($justify: space-between, $align: center);
+  }
+}
+.col-right {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.util {
+  ul {
+    display: flex;
+  }
+
+  .link-g {
+    display: flex;
+    align-items: center;
+    height: $hdH;
+    &::before {
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+    }
+  }
+  .link-lang {
+    &::before {
+      content: "\f0ac";
+    }
+  }
+  .link-search {
+    &::before {
+      content: "\f002";
+    }
+  }
+  .link-my {
+    &::before {
+      content: "\f007";
     }
   }
 }
 
+// footer
 @import "_main", "_sub1";
