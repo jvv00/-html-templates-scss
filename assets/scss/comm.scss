@@ -98,13 +98,13 @@
         // input이 체크됐을 때 디자인
         display: flex;
         .bar:nth-child(1) {
-          transform: rotate(45deg) translate(0, 3px);
+          transform: rotate(45deg) translate(3px, 3px);
         }
         .bar:nth-child(2) {
           display: none;
         }
         .bar:nth-child(3) {
-          transform: rotate(-45deg) translate(0, -3px);
+          transform: rotate(-45deg) translate(0px, -0.9px);
         }
       }
 
@@ -127,10 +127,11 @@
     gap: 0.1875rem;
     height: $hdH;
     width: 36px;
+    cursor: pointer;
     .bar {
       display: block;
       border-radius: 2px;
-      width: 21px;
+      width: 22px;
       height: 2px;
       background: $black;
       transition: all 0.3s;

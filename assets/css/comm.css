@@ -366,13 +366,13 @@ legend {
   display: flex;
 }
 .gnb-wrap .input-burger:checked + .label-burger .bar:nth-child(1) {
-  transform: rotate(45deg) translate(0, 3px);
+  transform: rotate(45deg) translate(3px, 3px);
 }
 .gnb-wrap .input-burger:checked + .label-burger .bar:nth-child(2) {
   display: none;
 }
 .gnb-wrap .input-burger:checked + .label-burger .bar:nth-child(3) {
-  transform: rotate(-45deg) translate(0, -3px);
+  transform: rotate(-45deg) translate(0px, -0.9px);
 }
 .gnb-wrap .input-burger:checked ~ #gnb {
   left: 0;
@@ -387,11 +387,12 @@ legend {
   gap: 0.1875rem;
   height: 70px;
   width: 36px;
+  cursor: pointer;
 }
 .gnb-wrap .label-burger .bar {
   display: block;
   border-radius: 2px;
-  width: 21px;
+  width: 22px;
   height: 2px;
   background: #000;
   transition: all 0.3s;
